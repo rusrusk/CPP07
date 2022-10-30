@@ -76,5 +76,5 @@ T &Array<T>::operator[](unsigned int idx) {
 //------------------Exception class method what() definition------------------//
 template <typename T>
 const char *Array<T>::OutOfBoundariesException::what() const throw() {
-	return ("EXCEPTION : INDEX IS OUT OF BOUNDS");
+	return ("EXCEPTION : INDEX IS OUT OF BOUNDARIES");
 }

@@ -1,6 +1,5 @@
 #include "Array.hpp"
 #include "colors.hpp"
-#include <iostream>
 
 
 int main () {
@@ -26,8 +25,7 @@ int main () {
 	Array<int>a(7);
 	Array<int>b;
 	//-----------------Populating a-----------------//
-	int i;
-	for (i = 0; i < a.size(); i++) {
+	for (int i = 0; i < a.size(); i++) {
 		a[i] = i;
 	}
 	//-----------------Printing array [a]-----------------//
@@ -97,9 +95,8 @@ int main () {
 	//-----------------Printing array [arr_str]-----------------//
 	std::cout << COLOR_BOLD_CYAN << COLOR_UNDERLINE << "PRINTING [arr_str] ARRAY OF STRINGS" << END << std::endl;
 	for (int i = 0; i < arr_str.size(); i++) {
-		std::cout << COLOR_BOLD_GREEN << arr_str[i] << " " << END;
+		std::cout << COLOR_BOLD_BLACK << "[arr_str] | ELEMENT INDEX [" << i << "] : " << END << COLOR_BOLD_GREEN << arr_str[i] << " " << END << std::endl;
 	}
-	std::cout << std::endl;
 	delimiter
 	//-----------------Printing array [arr_str_2]-----------------//
 	std::cout << COLOR_BOLD_CYAN << COLOR_UNDERLINE << "PRINTING [arr_str_2] ARRAY OF STRINGS" << END << std::endl;
@@ -107,6 +104,26 @@ int main () {
 		std::cout << COLOR_BOLD_GREEN << arr_str_2[i] << " " << END;
 	}
 	std::cout << std::endl;
+	delimiter
+
+	//-----------------Populating [arr_str] with string elements-----------------//
+	std::cout << COLOR_BOLD_CYAN << COLOR_UNDERLINE << "ASSIGNING [arr_str] ARRAY WITH NEW STRING ELEMENTS" << END << std::endl;
+	arr_str[0] = "The Lights are on, but nobody is at home";
+	arr_str[1] = "Everything is funny, as long as it is happening to somebody else";
+	arr_str[2] = "A day without sunshine is like, you know, night";
+	arr_str[3] = "Knowledge is knowing a tomato is a fruit; wisdom is not putting it in a fruit salad";
+	arr_str[4] = "I intend to live forever. So far, so good";
+	//-----------------Printing fresh assigned [arr_str] elements-----------------//
+	std::cout << COLOR_BOLD_CYAN << COLOR_UNDERLINE << "PRINTING FRESH ASSIGNED 5 STRING ELEMENTS OF [arr_str] ARRAY" << END << std::endl;
+	for (int i = 0; i < arr_str.size(); i++) {
+		std::cout << COLOR_BOLD_BLACK << "[arr_str] | ELEMENT INDEX [" << i << "] : " << END << COLOR_BOLD_GREEN << arr_str[i] << " " << END << std::endl;
+	}
+	delimiter
+	//-----------------Checking if elements of [arr_str_2] underwent changes as well as [arr_str]-----------------//
+	std::cout << COLOR_BOLD_CYAN << COLOR_UNDERLINE << "CHECK IF ELEMENTS OF [arr_str_2] UNDERWENT CHANGES AS WELL AS [arr_str]" << END << std::endl;
+	for (int i = 0; i < arr_str_2.size(); i++) {
+		std::cout << COLOR_BOLD_BLACK << "[arr_str_2] | ELEMENT INDEX [" << i << "] : " << END << COLOR_BOLD_GREEN << arr_str_2[i] << " " << END << std::endl;
+	}
 	delimiter
 
 		//-----------------Test to examine the boundaries and invoking exceptions-----------------//
@@ -158,3 +175,5 @@ int main () {
 	}
 
 }
+
+

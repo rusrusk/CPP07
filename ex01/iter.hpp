@@ -18,32 +18,30 @@ void iter(T *array, int array_length, void (*func)(T &)) {
 	}
 }
 
-//--------------------ITER() CONST--------------------//
+// --------------------ITER() CONST--------------------//
 // template <typename T>
 // void iter (T *array, int array_length, void (*func)( const T&)) {
 // 	int i = 0;
 // 	while(i < array_length) {
-// 		func(array[i++]);
+// 		(*func)(array[i++]);
 // 	}
 // }
 
 //--------------------PRINT--------------------//
 template <typename T>
-void print1(T &display) {
+void print1( T &display) {
 	std::cout << COLOR_BOLD_GREEN << display << END << std::endl;
 }
 
 template <typename T>
-void print2(T &display) {
+void print2( T &display) {
 	std::cout << COLOR_BOLD_GREEN << display << END << std::endl;
 }
 
 
 
 void print3(std::string &display) {
-	display = "Rocky";
+	display = "Rocky Balboa";
 }
-
-
 
 #endif
